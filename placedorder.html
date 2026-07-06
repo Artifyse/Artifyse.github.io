@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="
+            width: 100%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 300px;">
+        <p id="summary">Reading order data...</p>
+        <script>
+
+            const data = new URLSearchParams(window.location.search);
+
+
+            const name = data.get("custname") || "there";
+            const device = data.get("device") || "your device/devices";
+            const device2 = data.get("device2") || "";
+            const device3 = data.get("device3") || "";
+
+
+            const box = document.getElementById("summary");
+            if (data.toString() === "") {
+
+                box.textContent = "Tip: submit the order form to see your order appear here.";
+            } else {
+                box.textContent = `Thanks ${name}! Your ${device}${device2}${device3} order has been confirmed.`;
+            }
+        </script>
+    </div>
+</body>
+
+</html>
