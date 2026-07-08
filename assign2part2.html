@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .large-word {
+            font-size: 4em;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            min-height: 30vh;
+        }
+
+        .body {
+            margin: 0;
+            display: grid;
+            place-items: center;
+            min-height: 20vh;
+            /* Takes full window height */
+        }
+    </style>
+</head>
+
+<body>
+    <p id="summary">Reading order data...></p>
+    <script>
+
+        const data = new URLSearchParams(window.location.search);
+
+
+        const name = data.get("custname") || "test ";
+
+
+        const box = document.getElementById("summary");
+        if (data.toString() === "") {
+
+            box.textContent = "Tip: submit the order form to see your order appear here.";
+        } else {
+            box.textContent = `Thanks ${name}for contacting us at Pear support! .`;
+        }
+    </script>
+
+</body>
+
+
+
+
+<p><span class="large-word">Thank You!</span></p>
