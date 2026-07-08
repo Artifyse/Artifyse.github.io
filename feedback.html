@@ -1,12 +1,37 @@
 <!-- Author Ethan Chua,261426G -->
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .large-word {
+            font-size: 4em;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            min-height: 10vh;
+        }
+
+        .body {
+            margin: 0;
+            display: grid;
+            place-items: center;
+            min-height: 40vh;
+            /* Takes full window height */
+        }
+    </style>
+</head>
+<body class="body">
 <h1>Welcome to our feedback page</h1>
 <p>Your feedback is needed as we love to improve our online store for you. First, type in your email and name, then
     begin by selecting a product below.</p>
 <hr>
-<form>
-    <label for="email">E-mail:</label>
-    <input type="email" name="email" id="email" placeholder="you@example.com" required>
+<form action="thankyou.html" method="get">
+    <label  for="email">E-mail:</label>
+    <input  type="email" name="email" id="email" placeholder="you@example.com" required>
     <br><br>
 
     <label for="custname">Your name:</label>
@@ -15,7 +40,7 @@
     <br><br>
 
     <fieldset>
-        <legend>Select Product:</legend>
+        <legend>Select Product:</legend> 
         <label><input type="radio" name="size" value="UPhone 16" checked> UPhone 16
         </label>
         <label><br><input type="radio" name="size" value="UPad Pro"> UPad Pro
@@ -32,6 +57,15 @@
     <br><br>
     <p>How satisfied are you with our product?</p>
     <input type="range" name="Satisfaction" min="0" max="100" step="25">
+    <div style="display: flex; justify-content: space-between; width: 50%; max-width: 130px;">
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+  <span>4</span>
+  <span>5</span>
+</div>
+    <br><br>
     <input type="submit" value="Submit Feedback">
     <input type="reset" value="Clear Form">
 </form>
+
