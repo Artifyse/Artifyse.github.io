@@ -1,3 +1,4 @@
+<!--Author: Darryl Fong Yuan Wei, 261361J-->
 <DOCTYPE html>
     <html lang="en">
 
@@ -17,89 +18,86 @@
                 padding: 8px;
             }
 
-            #moving-box {
+            .moving-box {
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 21%;
+                width: 0%;
+                height: 30%;
                 background-color: white;
                 z-index: 1000;
             }
 
             .spacedpara {
-                margin-bottom: 150px;
+                margin-bottom: 220px;
             }
 
-            .custbutton {
-                display: inline-block;
-                padding: 5px 10px;
-                background-color: #32b8ed;
+            .navbar ul {
+                list-style-type: none;
+                background-color: orange;
+                padding: 0px;
+                overflow: hidden;
+            }
+
+            .navbar a {
                 color: white;
-                width: 100px;
-                height: 25px;
-                font: bold;
-                font-size: large;
-                border-radius: 5px;
                 text-decoration: none;
+                padding: 20px 16px;
+                display: block;
                 text-align: center;
-                align-items: center;
-                justify-content: center;
             }
 
-            .custbutton :hover {
-                background-color: aliceblue;
-                color: #32b8ed;
+            .navbar a:hover {
+                background-color: grey;
+                color: white;
+                transition: 0.3s;
             }
 
-            .center {
-                width: 100%;
-                height: 30%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-top: 300px;
+            .navbar li {
+                display: inline-block;
             }
         </style>
     </head>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>                
+            </ul>
+        </div>
+    </nav>
 
-    <!--Author: Darryl Fong Yuan Wei, 261361J-->
-    <div id="moving-box">
-        <a href="index.html">Home</a>
-        <a href="products.html">Product catalog</a>
-        <a href="feedback.html">Feedback forms</a>
-        <a href="contact.html">Contact us</a>
-        <a href="about.html">About us</a>
-        <p class="spacedpara"></p>
-        <fieldset>
-            <form action="placedorder.html" method="get">
-                <label for="custname">Your name:</label>
-                <br>
-                <input type="text" name="custname" id="custname" size="30" placeholder="e.g. Danny" required>
-                <h2>Choice of device</h2>
-                <label><input type="checkbox" name="device" value="U Phone 16"> U Phone 16
-                </label>
-                <label>
+    <div class="moving-box">
+        <ul>
+            <p class="spacedpara"></p>
+            <fieldset>
+                <form action="placedorder.html" method="get">
+                    <label for="custname">Your name:</label>
                     <br>
-                    <input type="checkbox" name="device2" value=" and U Pad Pro"> U Pad Pro
-                </label>
-                <label>
+                    <input type="text" name="custname" id="custname" size="30" placeholder="e.g. Danny" required>
+                    <h2>Choice of device</h2>
+                    <label><input type="checkbox" name="device" value="U Phone 16"> U Phone 16
+                    </label>
+                    <label>
+                        <br>
+                        <input type="checkbox" name="device2" value=" and U Pad Pro"> U Pad Pro
+                    </label>
+                    <label>
+                        <br>
+                        <input type="checkbox" name="device3" value=" and Pear Watch Ultra"> Pear Watch Ultra
+                    </label>
                     <br>
-                    <input type="checkbox" name="device3" value=" and Pear Watch Ultra"> Pear Watch Ultra
-                </label>
-                <br>
-                <br>
-                <input type="submit" value="Submit order">
-                <input type="reset" value="Reset order">
-            </form>
-        </fieldset>
+                    <br>
+                    <input type="submit" value="Submit order">
+                    <input type="reset" value="Reset order">
+                </form>
+            </fieldset>
+        </ul>
     </div>
-    <div id="center">
-        <a href="index.html" class="custbutton moving-box">Home</a>
-        <a href="products.html" class="custbutton moving-box">Products</a>
-        <a href="feedback.html" class="custbutton moving-box">Feedback</a>
-        <a href="about.html" class="custbutton moving-box">About us</a>
-        <a href="contact.html" class="custbutton moving-box">Home</a>
-    </div>
+
     <div style="
             width: 100%;
             height: 30%;
