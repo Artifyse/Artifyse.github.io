@@ -8,14 +8,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <style>
+            fieldset {
+                border: none;
+            }
+
+            form {
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border: none;
+            }
+
+            img {
+                border-radius: 8px;
+            }
+
             table {
-                border-collapse: collapse;
+                border-collapse: separate;
+                border-spacing: 0;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
             }
 
             th,
             td {
-                border: 1px solid #444;
-                padding: 8px;
+                border-right: 1px solid #1a1a1a;
+                border-bottom: 1px solid #1a1a1a;
+                border-top: none;
+                border-left: none;
+                padding: 12px;
+            }
+
+            th {
+                background-color: #1a1a1a;
+                color: white;
+                text-align: left;
+                border-collapse: separate;
+
+            }
+
+            th:first-child {
+                border-top-left-radius: 10px;
+            }
+
+            th:last-child {
+                border-top-right-radius: 10px;
             }
 
             .moving-box {
@@ -42,29 +82,55 @@
 
             .navbar ul {
                 list-style-type: none;
-                background-color:darkred;
-                padding: 0px;
+                background-color: #1a1a1a;
+                padding: 10px;
                 overflow: clip;
             }
 
             .navbar a {
                 color: white;
                 text-decoration: none;
-                padding: 25px 15px;
+                padding: 25px 12px;
                 display: block;
                 text-align: center;
-                font-size: 25px;
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+                font-size: 20px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
             }
 
             .navbar a:hover {
-                background-color:brown;
-                color:white;
+                background-color: #007bff;
+                color: white;
                 transition: 0.4s;
             }
 
             .navbar li {
                 display: inline-block;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f8f9fa;
+                color: #333;
+                margin: 0;
+                padding: 0;
+            }
+
+            img {
+                border-radius: 8px;
+            }
+
+            table,
+            .moving-box {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border: #1a1a1a 1px solid;
+            }
+
+            th:last-child, td:last-child {
+                border-right: none;
+            }
+            
+            tr:last-child td {
+                border-bottom: none;
             }
         </style>
     </head>
@@ -75,7 +141,7 @@
                 <li><a href="products.html">Products</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">Contact us</a></li>                
+                <li><a href="contact.html">Contact us</a></li>
             </ul>
         </div>
     </nav>
@@ -93,11 +159,19 @@
                     </label>
                     <label>
                         <br>
-                        <input type="checkbox" name="device2" value=" and U Pad Pro"> U Pad Pro
+                        <input type="checkbox" name="device2" value=" U Pad Pro"> U Pad Pro
                     </label>
                     <label>
                         <br>
-                        <input type="checkbox" name="device3" value=" and Pear Watch Ultra"> Pear Watch Ultra
+                        <input type="checkbox" name="device3" value=" Pear Watch Ultra"> Pear Watch Ultra
+                    </label>
+                    <label>
+                        <br>
+                        <input type="checkbox" name="device4" value=" Megbook Air"> Megbook Air
+                    </label>
+                    <label>
+                        <br>
+                        <input type="checkbox" name="device5" value=" Wireless Waterpods"> Wireless Waterpods
                     </label>
                     <br>
                     <br>
@@ -121,6 +195,18 @@
                 <caption>
                     <h1>Our top three bestselling devices</h1>
                 </caption>
+                <tr>
+                    <th>
+                        Product
+                    </th>
+                    <th>
+                        Picture
+                    </th>
+                    <th>
+                        Why choose this device?
+                    </th>
+                </tr>
+                <tr>
                 <tr>
                     <td>
                         U Phone 16
@@ -161,15 +247,15 @@
     </div>
     <br>
     <div style="
-        width: 100%;
-        height: 30%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 400px;">
+            width: 100%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 300px;">
         <table>
             <caption>
-                Our current products
+                <h2>Our current products</h2>
             </caption>
             <tr>
                 <th>
@@ -191,7 +277,7 @@
                 </td>
                 <td>
                     Screen Size: 6.1-inch Super Retina XDR OLED display (460 ppi)<br>Resolution: 1179 × 2556 pixels
-                    (FHD+)<br>Refresh Rate: 60HzBrightness: 1,000 nits (typical) up to 2,000 nits (peak
+                    (FHD+)<br>Refresh Rate: 60Hz<br>Brightness: 1,000 nits (typical) up to 2,000 nits (peak
                     outdoor)<br>Interface: Dynamic Island
                 </td>
             </tr>
@@ -219,6 +305,29 @@
                     Screen Size: 1.92-inch Always-on LTPO OLED display<br>Resolution: 410 × 502 pixels (338
                     ppi)<br>Brightness: 3,000 nits peak outdoor brightness (dims down to 1 nit in low
                     light)<br>Interface: Night Mode UI option (turns text entirely red for low-light legibility)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Megbook Air
+                </td>
+                <td>
+                    <img src="megbookair.jpg" alt="Picture of the Megbook Air" width="150">
+                </td>
+                <td>
+                    Screen Size: 13.3-inch Retina display<br>Resolution: 2560 × 1600 pixels (227 ppi)<br>Refresh Rate:
+                    60Hz<br>Brightness: 500 nits (typical) up to 1000 nits (peak)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Wireless Waterpods
+                </td>
+                <td>
+                    <img src="wirelesswaterpods.jpg" alt="Picture of the Wireless Waterpods" width="150">
+                </td>
+                <td>
+                    Water Resistance: IP67<br>Audio Quality: Spatial Audio<br>Battery Life: Up to 6 hours
                 </td>
             </tr>
         </table>
