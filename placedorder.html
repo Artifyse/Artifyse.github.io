@@ -5,7 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: aliceblue;
+        }
+
+        .navbar {
+            position: fixed;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            background-color: #1a1a1a;
+            padding: 10px;
+            overflow: clip;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 25px 12px;
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+
+        .navbar a:hover {
+            background-color: #007bff;
+            color: white;
+            transition: 0.4s;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .button {
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #007bff;
+            transition: 0.4s;
+        }
+    </style>
 </head>
+<nav>
+    <div class="navbar">
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </div>
+</nav>
 
 <body>
     <div style="
@@ -15,16 +87,22 @@
             align-items: center;
             justify-content: center;
             margin-top: 300px;">
-        <p id="summary">Reading order data...</p>
+        <h1 id="summary">Reading order data...</h1>
         <script>
 
             const data = new URLSearchParams(window.location.search);
 
 
             const name = data.get("custname") || "there"; 0
-            const device = data.get("device") || "your device/devices";
-            const device2 = data.get("device2") || "";
-            const device3 = data.get("device3") || "";
+            const AllDevices = [
+                data.get("device"),
+                data.get("device2"),
+                data.get("device3"),
+                data.get("device4"),
+                data.get("device5")
+            ].filter(Boolean).join(", ");
+
+
 
 
             const box = document.getElementById("summary");
@@ -32,10 +110,21 @@
 
                 box.textContent = "Tip: submit the order form to see your order appear here.";
             } else {
-                box.textContent = `Thanks ${name}! Your ${device}${device2}${device3} order has been confirmed.`;
+                box.textContent = `Thanks ${name}! Your order has been confirmed!`
+                box.textContent += ` You have ordered ${AllDevices}.`;
             }
         </script>
     </div>
+    <a href="products.html" class="button" style="
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;">Return to shopping?</a>
 </body>
 
 </html>
