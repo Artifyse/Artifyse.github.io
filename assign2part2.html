@@ -1,387 +1,97 @@
-<!--Author: Darryl Fong Yuan Wei, 261361J-->
-<DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .large-word {
+            font-size: 4em;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            min-height: 30vh;
+        }
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-            fieldset {
-                border: none;
-            }
+        .body {
+            font-size: 3em;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            min-height: 20vh;
+            /* Takes full window height */
+        }
 
-            form {
-                background-color: white;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border: none;
-            }
+        .navbar ul {
+            list-style-type: none;
+            background-color: orange;
+            padding: 0px;
+            overflow: hidden;
+        }
 
-            img {
-                border-radius: 8px;
-                max-width: 80%;
-                height: auto;
-            }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 20px 16px;
+            display: block;
+            text-align: center;
+        }
 
-            table {
-                border-collapse: separate;
-                border-spacing: 0;
-                background-color: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                overflow: hidden;
-            }
+        .navbar a:hover {
+            background-color: grey;
+            color: white;
+            transition: 0.3s;
+        }
 
-            th,
-            td {
-                border-right: 1px solid #1a1a1a;
-                border-bottom: 1px solid #1a1a1a;
-                border-top: none;
-                border-left: none;
-                padding: 12px;
-            }
+        .navbar li {
+            display: inline-block;
+        }
 
-            th {
-                background-color: #1a1a1a;
-                color: white;
-                text-align: left;
-                border-collapse: separate;
+        .button {
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-            }
+        .button:hover {
+            background-color: #007bff;
+            transition: 0.4s;
+        }
+    </style>
+</head>
+<link href="navigation.css" rel="stylesheet">
+<div class="navbar">
+    <ul>
+        <li> <a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+    </ul>
 
-            th:first-child {
-                border-top-left-radius: 10px;
-            }
 
-            th:last-child {
-                border-top-right-radius: 10px;
-            }
+</div>
 
-            .moving-box {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 0%;
-                height: 30%;
-                background-color: white;
-                z-index: 1000;
-            }
+<body> <a href="contact.html" class="button" style="
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;">Return to our contact page?</a></body>
 
-            .spacedpara {
-                margin-bottom: 240px;
-            }
 
-            .navbar {
-                position: fixed;
-                top: -20px;
-                left: 0;
-                width: 100%;
-                z-index: 1000;
-            }
-
-            .navbar ul {
-                list-style-type: none;
-                background-color: #1a1a1a;
-                padding: 10px;
-                overflow: clip;
-            }
-
-            .navbar a {
-                color: white;
-                text-decoration: none;
-                padding: 25px 12px;
-                display: block;
-                text-align: center;
-                font-size: 20px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-            }
-
-            .navbar a:hover {
-                background-color: #007bff;
-                color: white;
-                transition: 0.4s;
-            }
-
-            .navbar li {
-                display: inline-block;
-            }
-
-            body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background-color: #f8f9fa;
-                color: #333;
-                margin: 0;
-                padding: 0;
-            }
-
-            img {
-                border-radius: 8px;
-            }
-
-            table,
-            .moving-box {
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                border: #1a1a1a 1px solid;
-            }
-
-            th:last-child,
-            td:last-child {
-                border-right: none;
-            }
-
-            tr:last-child td {
-                border-bottom: none;
-            }
-
-            .button {
-                background-color: #1a1a1a;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 5px;
-            }
-
-            .button:hover {
-                background-color: #007bff;
-                transition: 0.4s;
-            }
-
-            .buttonreject {
-                background-color: #1a1a1a;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 16px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 5px;
-            }
-
-            .buttonreject:hover {
-                background-color:red;
-                transition: 0.4s;
-            }
-
-            .customtextbox {
-                font-family: Arial, Helvetica, sans-serif;
-                padding: 4px 4px;
-            }
-        </style>
-    </head>
-    <nav>
-        <div class="navbar">
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="moving-box">
-        <ul>
-            <p class="spacedpara"></p>
-            <fieldset>
-                <form action="placedorder.html" method="get">
-                    <label for="custname">Your name:</label>
-                    <br>
-                    <input type="text" class="customtextbox" name="custname" id="custname" size="30"
-                        placeholder="e.g. Danny" required>
-                    <label for="custemail">Your E-mail:</label>
-                    <br>
-                    <input type="text" class="customtextbox" name="custemail" id="custemail" size="30"
-                        placeholder="e.g. Danny123@gmail.com" required>
-                    <h2>Choice of device</h2>
-                    <label><input type="checkbox" name="device" value="U Phone 16"> U Phone 16
-                    </label>
-                    <label>
-                        <br>
-                        <input type="checkbox" name="device2" value=" U Pad Pro"> U Pad Pro
-                    </label>
-                    <label>
-                        <br>
-                        <input type="checkbox" name="device3" value=" Pear Watch Ultra"> Pear Watch Ultra
-                    </label>
-                    <label>
-                        <br>
-                        <input type="checkbox" name="device4" value=" Megbook Air"> Megbook Air
-                    </label>
-                    <label>
-                        <br>
-                        <input type="checkbox" name="device5" value=" Wireless Waterpods"> Wireless Waterpods
-                    </label>
-                    <br>
-                    <br>
-                    <input type="submit" value="Submit order" class="button">
-                    <input type="reset" value="Reset order" class="buttonreject">
-                </form>
-            </fieldset>
-        </ul>
-    </div>
-
-    <div style="
-            width: 100%;
-            height: 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 300px;">
-        <div>
-
-            <table>
-                <caption>
-                    <h1>Our top three bestselling devices</h1>
-                </caption>
-                <tr>
-                    <th>
-                        Product
-                    </th>
-                    <th>
-                        Picture
-                    </th>
-                    <th>
-                        Why choose this device?
-                    </th>
-                </tr>
-                <tr>
-                <tr>
-                    <td>
-                        U Phone 16
-                    </td>
-                    <td>
-                        <img src="uphone16.jpg" alt="Picture of the U Phone 16." width="200">
-                    </td>
-                    <td>
-                        With a new sleek design and a better than ever performance! Perfect for your day to day
-                        schedules.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        U Pad Pro
-                    </td>
-                    <td>
-                        <img src="upadpro.jpg" alt="Picture of the U Pad Pro" width="200">
-                    </td>
-                    <td>
-                        With better batteries than the last, it's a guarantee to last the whole day.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Pear Watch Ultra
-                    </td>
-                    <td>
-                        <img src="pearwatch.jpg" alt="Picture of the Pear Watch Ultra" width="200">
-                    </td>
-                    <td>
-                        Comfortable, accurate heartrate monitor and maxed out functionality all around. What more
-                        could you ask for?
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <br>
-    <div style="
-            width: 100%;
-            height: 80%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 300px;">
-        <table>
-            <caption>
-                <h2>Our current products</h2>
-            </caption>
-            <tr>
-                <th>
-                    Product
-                </th>
-                <th>
-                    Picture
-                </th>
-                <th>
-                    Specs of the device
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    U Phone 16
-                </td>
-                <td>
-                    <img src="uphone16.jpg" alt="Picture of the U Phone 16." width="150">
-                </td>
-                <td>
-                    Screen Size: 6.1-inch Super Retina XDR OLED display (460 ppi)<br>Resolution: 1179 × 2556 pixels
-                    (FHD+)<br>Refresh Rate: 60Hz<br>Brightness: 1,000 nits (typical) up to 2,000 nits (peak
-                    outdoor)<br>Interface: Dynamic Island
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    U Pad Pro
-                </td>
-                <td>
-                    <img src="upadpro.jpg" alt="Picture of the U Pad Pro" width="150">
-                </td>
-                <td>
-                    Screen Size: 13-inch Ultra Retina XDR display<br>Technology: Tandem OLED (dual-panel
-                    architecture)<br>Resolution: 2752 × 2064 pixels (264 ppi)<br>Refresh Rate: 120Hz ProMotion
-                    (adaptive refresh)<br>Brightness: 1,000 nits (full-screen) up to 1,600 nits (HDR peak)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Pear Watch Ultra
-                </td>
-                <td>
-                    <img src="pearwatch.jpg" alt="Picture of the Pear Watch Ultra" width="150">
-                </td>
-                <td>
-                    Screen Size: 1.92-inch Always-on LTPO OLED display<br>Resolution: 410 × 502 pixels (338
-                    ppi)<br>Brightness: 3,000 nits peak outdoor brightness (dims down to 1 nit in low
-                    light)<br>Interface: Night Mode UI option (turns text entirely red for low-light legibility)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Megbook Air
-                </td>
-                <td>
-                    <img src="megbookair.jpg" alt="Picture of the Megbook Air" width="150">
-                </td>
-                <td>
-                    Screen Size: 13.3-inch Retina display<br>Resolution: 2560 × 1600 pixels (227 ppi)<br>Refresh Rate:
-                    60Hz<br>Brightness: 500 nits (typical) up to 1000 nits (peak)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Wireless Waterpods
-                </td>
-                <td>
-                    <img src="wirelesswaterpods.jpg" alt="Picture of the Wireless Waterpods" width="150">
-                </td>
-                <td>
-                    Water Resistance: IP67<br>Audio Quality: Spatial Audio<br>Battery Life: Up to 6 hours
-                </td>
-            </tr>
-        </table>
-    </div>
-    </div>
-    </body>
+<p><span class="large-word">Thank You!</span></p>
+<p><span class="body"> Thank you for reaching out to us at Pear Support!</span></p>
