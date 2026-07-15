@@ -21,8 +21,48 @@
             min-height: 20vh;
             /* Takes full window height */
         }
+
+        .navbar ul {
+            list-style-type: none;
+            background-color: orange;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 20px 16px;
+            display: block;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: grey;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
     </style>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
 </head>
+
 
 <body class="body">
 
