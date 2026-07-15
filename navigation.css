@@ -1,3 +1,4 @@
+<style>
             .navbar {
                 position: fixed;
                 top: -20px;
@@ -31,3 +32,4 @@
 
             .navbar li {
                 display: inline-block;
+</style>
