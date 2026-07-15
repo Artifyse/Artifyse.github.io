@@ -19,13 +19,15 @@
             display: grid;
             place-items: center;
             min-height: 20vh;
+            font-family: Arial, Helvetica, sans-serif;
             /* Takes full window height */
         }
-
+        form {
+            font-family: Arial, Helvetica, sans-serif;
+        }
     </style>
 
-    <link href="navigation.css"
-        rel="stylesheet">
+    <link href="navigation.css" rel="stylesheet">
 
     <nav>
         <div class="navbar">
@@ -76,12 +78,25 @@
             <label><input type="radio" name="size" checked> Uphone</label>
             <label><input type="radio" name="size" value="large"> Upad</label>
             <label><input type="radio" name="size" value="large"> Uwatch</label>
+            <br>
+            <label><input type="radio" name="size" value="large"> Megbook</label>
+            <label><input type="radio" name="size" value="large"> Waterpod</label>
         </fieldset>
 
         <p>Why are you contacting us?:</p>
-        <label><input type="checkbox" name="Device issues" value="yes"> issues</label>
-        <label><input type="checkbox" name="Missing link" value="yes"> MIssing
-        </label>
+        <label><input type="checkbox" name="Forgot Pass" value="yes">Forgot your Pear account password </label>
+        <br>
+        <label><input type="checkbox" name="Disabled" value="yes">Forgot your Pear passcode or Uphone is disabled </label>
+        <br>
+        <label><input type="checkbox" name="Cancel Sub" value="yes">If you want to cancel your subscription with Pear </label>
+        <br>
+        <label><input type="checkbox" name="Update Devices" value="yes">Update your Uphone or Upad </label>
+        <br>
+        <label><input type="checkbox" name="Find lost" value="yes">Find your lost Pear device </label>
+
+
+
+
 
         <p>Comments:</p>
         <textarea name="notes" id="notes" rows="4" cols="40">
