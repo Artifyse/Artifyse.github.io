@@ -170,7 +170,7 @@
             }
 
             .buttonreject:hover {
-                background-color:red;
+                background-color: red;
                 transition: 0.4s;
             }
 
@@ -178,18 +178,34 @@
                 font-family: Arial, Helvetica, sans-serif;
                 padding: 4px 4px;
             }
+
+            .navbar-brand {
+                position: fixed;
+                top: 30px;
+                right: 110px;
+                color: white;
+                font-size: 24px;
+                font-weight: bold;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-decoration: none;
+                z-index: 1001;
+            }
         </style>
     </head>
     <nav>
         <div class="navbar">
             <ul>
-                <li> <a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="feedback.html">Feedback</a></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="contact.html">Contact us</a></li>
             </ul>
+            <img src="pear.png" href="index.html" alt="Pear Logo"
+                style="width: 100px; height: 100px; position: absolute; top: 20px; right: 10px;">
         </div>
+        <a href="index.html" class="navbar-brand ">Pear
+        </a>
     </nav>
 
     <div class="moving-box">
