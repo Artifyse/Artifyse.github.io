@@ -32,4 +32,15 @@
             .navbar li {
                 display: inline-block;
             }
+            .navbar-brand {
+                position: fixed;
+                top: 30px;
+                right: 110px;
+                color: white;
+                font-size: 24px;
+                font-weight: bold;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                text-decoration: none;
+                z-index: 1001;
+            }
 
