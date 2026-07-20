@@ -190,6 +190,37 @@
                 text-decoration: none;
                 z-index: 1001;
             }
+
+            .scroll-container {
+                position:fixed;
+                bottom:30px;
+                right:50%;
+                transform: translateY(-50%);
+                z-index:999;
+                transition:opacity 0.3s ease;
+            }
+
+            .arrow {
+                width:20px;
+                height:40px;
+                border-right:4px solid #333;
+                border-bottom: #333;
+                transform:rotate(45deg) ;
+                animation: bounce 2s infinite;
+            }
+
+            @keyframes bounce {
+                0%, 100% {
+                    transform: translateY(0px);
+                }
+                40% {
+                    transform: translateY(-15px);
+                }
+                60% {
+                    transform: translateY(-6px);
+                }
+            }
+
         </style>
     </head>
     <nav>
@@ -247,6 +278,10 @@
                 </form>
             </fieldset>
         </ul>
+    </div>
+
+    <div id="scroll-arrow" class="scroll-container">
+        <div class="arrow"></div>
     </div>
 
     <div style="
