@@ -1,5 +1,9 @@
             /*Darryl Fong Yuan Wei 261361J*/
 
+            * {
+                box-sizing: border-box;
+            }
+
             fieldset {
                 border: none;
             }
@@ -14,7 +18,7 @@
 
             img {
                 border-radius: 8px;
-                max-width: 80%;
+                max-width: 100%;
                 height: auto;
             }
 
