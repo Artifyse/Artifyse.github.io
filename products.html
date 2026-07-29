@@ -6,7 +6,7 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Pear's products</title>
 
 
         <link rel="stylesheet" href="products.css">
@@ -28,8 +28,9 @@
         <a href="about.html" class="navbar-brand">Pear
         </a>
     </nav>
+    <button id="showbtn" class="showbtn altmovingbox">Start shopping</button>
 
-    <div class="moving-box">
+    <div id="catalog" style="display: none;">
         <ul>
             <p class="spacedpara"></p>
             <fieldset>
@@ -71,15 +72,17 @@
     </div>
 
     <div style="
-            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
             height: 40%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 300px;">
+            margin-top: 300px;
+            border-collapse:collapse;">
         <div>
 
-            <table>
+            <table width="100%">
                 <caption>
                     <h1>Our top three bestselling devices</h1>
                 </caption>
@@ -223,7 +226,7 @@
     </div>
 
     <br>
-<p class="spacedpara"></p>
+    <p class="spacedpara"></p>
     <a href="https://sg.etoren.com/products/apple-iphone-16-5g-a3287-128gb-white-nano-sim-+-esim" target="_blank">
         Credit for picture of U Phone 16 </a><br>
     <a href="ttps://www.apple.com/sg/shop/buy-watch/apple-watch-ultra/49mm-cellular-black-titanium-black-charcoal-trail-loop"
@@ -234,5 +237,28 @@
     <a href="https://www.cnet.com/reviews/apple-airpods-review/" target="_blank"> Credit for picture of Wireless
         Waterpods </a>
     </body>
+
+    </html>
+    </body>
+
+
+
+    <script lang="JavaScript">
+        const button = document.getElementById('showbtn');
+        const content = document.getElementById('catalog');
+        button.addEventListener = ("click", function () {
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                button.textContent = 'Close cart'
+            } else {
+                content.style.display = 'none';
+                button.textContent = 'Start shopping'
+            }
+        }
+
+
+        );
+
+    </script>
 
     </html>
