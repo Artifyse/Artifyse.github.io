@@ -186,3 +186,20 @@
                 text-decoration: none;
                 z-index: 1001;
             }
+
+            .catalog {
+                display: none;
+            }
+             
+            .showbtn{
+                display: block;
+            }
+
+            .altmovingbox {
+                position:fixed;
+                bottom: 30px;
+                left:30px;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 30px;
+                padding: 8px 10px;
+            }
