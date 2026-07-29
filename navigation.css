@@ -51,4 +51,30 @@ height: auto; }
 /* boxes in % rather than px */
 .column { width: 50%; }
 * { box-sizing: border-box; }
+.brand {
 
+    margin-top: auto;          
+
+    text-align: center;
+
+    padding-bottom: 20px;
+
+}
+
+.brand img {
+
+    width: 70px;
+
+    height: auto;
+
+}
+
+.brand h2 {
+
+    margin-top: 10px;
+
+    font-size: 28px;
+
+    color: white;
+
+}
