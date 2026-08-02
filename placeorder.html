@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order!</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            <img src="pear.png" href="index.html" alt="Pear Logo"
+                style="width: 100px; height: 100px; position: absolute; top: 20px; right: 10px;">
+        </div>
+        <a href="about.html" class="navbar-brand">Pear
+        </a>
+    </nav>
+    <div class="go-down"> 
+        <h1>Place Your Order!</h1>
+        <p>Please fill out the form below to place your order. We will contact you shortly.
+        <form class="order-form" method="get" action="placedorder.html">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" autocomplete="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" autocomplete="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" autocomplete="tel" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" autocomplete="address-level1" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="product">Product:</label>
+                <select id="product" name="product" required>
+                    <option value="">Select a product</option>
+                    <option value="uphone16">U Phone 16</option>
+                    <option value="upadpro">U Pad Pro</option>
+                    <option value="Pear Watch Ultra">Pear Watch Ultra</option>
+                    <option value="Megbook Air">Megbook Air</option>
+                    <option value="Wireless Waterpods">Wireless Waterpods</option>
+                </select>
+                <button class="button" type="submit">Place Order</button>
+                <button class="buttonreject" type="reset">Reset</button>
+            </div>
+        </form>
+</body>
+
+</html>

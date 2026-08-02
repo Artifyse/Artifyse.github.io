@@ -1,73 +1,31 @@
-<!--Darryl Fong Yuan Wei 261361J-->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Thank You</title>
     <link rel="stylesheet" href="products.css">
-
 </head>
-<nav>
-    <div class="navbar">
-        <ul>
-            <li> <a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="about.html">About us</a></li>
-            <li><a href="contact.html">Contact us</a></li>
-        </ul>
-    </div>
-</nav>
-
 <body>
-    <div style="
-            width: 100%;
-            height: 30%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 300px;">
-        <h1 id="summary">Reading order data...</h1>
-        <script>
+        <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+            <img src="pear.png" href="index.html" alt="Pear Logo"
+                style="width: 100px; height: 100px; position: absolute; top: 20px; right: 10px;">
+        </div>
+        <a href="about.html" class="navbar-brand">Pear
+        </a>
+    </nav>
 
-            const data = new URLSearchParams(window.location.search);
-
-
-            const name = data.get("custname") || "there"; 0
-            const AllDevices = [
-                data.get("device"),
-                data.get("device2"),
-                data.get("device3"),
-                data.get("device4"),
-                data.get("device5")
-            ].filter(Boolean).join(", ");
-
-
-
-
-            const box = document.getElementById("summary");
-            if (data.toString() === "") {
-
-                box.textContent = "Tip: submit the order form to see your order appear here.";
-            } else {
-                box.textContent = `Thanks ${name}! Your order has been confirmed!`
-                box.textContent += ` You have ordered ${AllDevices}.`;
-            }
-        </script>
-    </div>
-    <a href="products.html" class="button" style="
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 10px 20px;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;">Return to shopping?</a>
-</body>
-
-</html>
+    <h1 style="text-align: center; margin-top: 200px;">Thank you for your order!</h1>
+    <h3 style="text-align: center;">We will contact you shortly to confirm your order.</h3>
+    <a href="testproducts.html" style="display: block; margin: 0 auto; margin-top: 10%; text-align: center;
+    text-decoration: none;">
+        <button class="button" style="display: block; margin: 0 auto; margin-top: 10%;">Back to Products</button>
+    </a>
