@@ -6,59 +6,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
-    <link href="navigation.css"
-        rel="stylesheet">
+    <link href="navigation.css" rel="stylesheet">
 </head>
-    <nav>
-        <div class="navbar">
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-            </ul>
-            <img src="pear.png" href="index.html" alt="Pear Logo"
-                style="width: 100px; height: 100px; position: absolute; top: 20px; right: 10px;">
-        </div>
-        <a href="about.html" class="navbar-brand">Pear
-        </a>
-    </nav>
-<body>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+   
+    .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+    }
+
+   
+    .row {
+        margin: 0 -5px;
+    }
+
     
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+    }
+</style>
+<nav>
+    <div class="navbar">
+        <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+        <img src="pear.png" href="index.html" alt="Pear Logo"
+            style="width: 100px; height: 100px; position: absolute; top: 20px; right: 10px;">
+    </div>
+    <a href="about.html" class="navbar-brand">Pear
+    </a>
+</nav>
+
+<body>
+
     <br>
     <br>
     <br>
     <hr>
     <h2>What is Pear?</h2>
-    <p>Pear is a Tech company from Singapore, known for its smart devices such as the Uphone, Upad and PearWatch, founded by Darryl and his team in 2026</p>
+    <p>Pear is a Tech company from Singapore, known for its smart devices such as the Uphone, Upad and PearWatch,
+        founded by Darryl and his team in 2026</p>
     <h2>What Pear strives for</h2>
-     <p>At Pear, we strive to reduce tech waste using sustainable materials and provide our customers with the best service we re able to provide.</p>
-     <h2>Why choose Pear?</h2>
-     <p>Pear uses many recycled and sustainable materials in its devices and gets materials from ethical sources </p>
-   
-   <br>
-    <br>
-    <table style="font-family: arial;">
-        <caption>Our Values</caption>
-        <br>
-<tr>
-<th>Privacy</th>
-<th>Education</th>
+    <p>At Pear, we strive to reduce tech waste using sustainable materials and provide our customers with the best
+        service we re able to provide.</p>
+    <h2>Why choose Pear?</h2>
+    <p>Pear uses many recycled and sustainable materials in its devices and gets materials from ethical sources </p>
 
-</tr>
-<tr>
-<td>We believe that privacy should be a basic human right, which is why we will never collect data from our users' devices without their consent</td>
-<td>As digital skills are getting more important in the world, we are working with many educational institutes across many different countries to enchance learning in and out of the classroom</td>
+    <br>
+    <br>
+    <h2>Our Values</h2>
 
-</tr>
-</table>
- 
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <h3>Privacy</h3>
+                <p>We believe that privacy should be a basic human right, which is why we will never collect data from
+                    our users' devices without their consent</p><br><br>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Education</h3>
+                <p>As digital skills are getting more important in the world, we are working with many educational
+                    institutes across many different countries to enchance learning in and out of the classroom</p>
+                    
+
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Innovation</h3>
+                <p>Whether its the materials, batteries, or size, we strive to find and innovate new ways to improve our devices with sustainability, longevity, and everyone in mind </p>
+                <br>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3>Environment</h3>
+                <p>As natural resources are being depleted, we develop our devices with the planet's environment in mind, which is why our devices are made to last, with recycled materials used as components</p>
+              
+            </div>
+        </div>
+    </div>
+
+
     <br>
     <br>
-     <h2>Have an issue or inquiry with our products?</h2>
-    <p>If you have an issue with one of our devices please contact us through our Contact page at <a href="contact.html">Contact us</a>
-        
+    <h2>Have an issue or inquiry with our products?</h2>
+    <p>If you have an issue with one of our devices please contact us through our Contact page at <a
+            href="contact.html">Contact us</a>
+
 </body>
 
 </html>
