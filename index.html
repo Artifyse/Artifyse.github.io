@@ -7,11 +7,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home </title>
     <link href="navigation.css" rel="stylesheet">
+    <link rel="stylesheet" href="button.css">
     <style>
         img {
             display: block;
             margin: auto;
         }
+
+
+        a {
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .section1 {
+            background: linear-gradient(to bottom, lightblue, rgb(248, 249, 255));
+            padding: 100px;
+        }
+
+        .section2 {
+            background: linear-gradient(to bottom, rgb(250, 203, 250), white);
+            padding: 100px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .myimg {
+            width: 600px;
+            height: auto;
+        }
+        .underline {
+  color: blue;
+  text-decoration: underline;
+}
     </style>
 </head>
 <nav>
@@ -22,49 +62,50 @@
             <li><a href="feedback.html">Feedback</a></li>
             <li><a href="about.html">About us</a></li>
             <li><a href="contact.html">Contact us</a></li>
-        </ul>
-        <img src="pear.png" href="index.html" alt="Pear Logo"
+        </ul> <img src="pear.png" href="index.html" alt="Pear Logo"
             style="width: 100px; height: 100px; position: absolute; top: 20px; right: 10px;">
     </div>
     <li><a href="about.html" class="navbar-brand">Pear</a></li>
 </nav>
 
-<body>
-    <br><br><br><br>
-    <a href="products.html"><img src="pear.png" alt=""></a>
-    <h1 align="center">Our best selling:</h1> <br><br><br><br>
-    <br><br><br><br>
-    <header>
+<body> <br><br><br><br>
+    <div class="section1">
         <h1 align="center">Uphone 16</h1>
-    </header>
-    <a href="products.html"><img src="uphone16.jpg" alt="">
-        <h2 align="center">Our latest Uphone in our fleet click to find out more</h2>
-    </a>
-    <br><br><br><br><br><br><br><br>
-    <header>
-        <h1 align="center">UpadPro</h1>
-    </header>
-    <a href="products.html"><img src="upadpro.jpg" alt="">
-        <h2 align="center">The UPad but better</h2>
-    </a>
-    <br><br><br>
-    <h1 align="center">Pear Watch Ultra</h1>
-    <br><br><br>
-    <a href="products.html"><img src="pearwatch.jpg">
-        <h2 align="center">Pear Watch Ultra, Time keeping reimagined.</h2>
-    </a>
-    <br><br><br><br>
-    <h1 align="center">Have an issue?</h1>
-    <a href="contact.html">
-        <h2 align="center">Contact us here</h2>
-    </a>
-    <br><br><br><br>
+        <h2 align="center">Meet the latest Uphone</h2>
+        <div class="button-row">
+            <a href="uphone16-showcase.html"><button class="button"> Learn more </button></a>
+            <a href="placeorder.html"><button class="buttonreject">Buy</button></a>
+        </div>
+        <br><br>
+        <a href="uphone16-showcase.html"><img src="uphone16 (1).jpg" class="myimg">
+
+        </a> <br><br><br>
+    </div>
+    <br><br>
+    <div class="section2">
+        <h1 align="center">College, Sorted</h1>
+        <h2 align="center">The Megbook Air has all you need for school and more with a light weight design</h2>
+        <br><br><br>
+        <div class="button-row"><a href="megbook-showcase.html"><button class="button"> Learn more </button></a>
+            <a href="placeorder.html"><button class="buttonreject">Buy</button></a>
+        </div>
+        <a href="megbook-showcase.html"><img src="megbookair.jpg" alt="">
+    </div>
+    <h1 align="center">Pear watch Ultra</h1>
+    <h2 align="center">Sports tracking made easy</h2>
+    <a href="watch-showcase.html"><img src="pearwatch.jpg" alt="">
+        <div class="button-row"> <a href="watch-showcase.html"><button class="button"> Learn more </button>
+            </a>
+            <a href="placeorder.html"><button class="buttonreject">Buy</button></a>
+        </div>
+    <br><br><br><br><br>
+        <h1 align="center">Have an issue?</h1> <a href="contact.html"></a>
+        <h2 align="center">Contact us <a href="contact.html" class="underline">here</a></h2>
+    </a> <br><br><br><br>
     <h1>About us:</h1>
-    <h2>Pear is a Tech company known for its smart devices such as the Uphone, Upad and PearWatch, founded in 2026 by
-        Darryl</h2>
-    <a href="about.html">
-        <h3>Find out more</h3>
-    </a>
+    <h2>Pear is a Tech company known for its smart devices such as the Uphone, Upad and PearWatch, founded in 2026
+        by Darryl</h2> <a href="about.html">
+        <a href="about.html" class="underline"><h3>Find out more</h3></a>
 </body>
 
 </html>
