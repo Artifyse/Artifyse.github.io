@@ -27,7 +27,13 @@
         .spacedpara {
             margin-top: 180px;
         }    
-
+            .product-selection {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            width:200px;
+            max-width: 60%;
+        }
     </style>
 
     <link href="navigation.css"
@@ -64,7 +70,7 @@
         <input type="text" name="custname" id="custname" size="10">
         <br><br>
 
-        <fieldset>
+ <fieldset class="product-selection">
             <legend>Select Product:</legend>
             <label><input type="radio" name="size" value="UPhone 16" checked> UPhone 16
             </label>
