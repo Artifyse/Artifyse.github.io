@@ -1,5 +1,7 @@
             /*Darryl Fong Yuan Wei 261361J*/
-
+            body {
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
                 .navbar {
                 position: fixed;
                 top: -20px;
