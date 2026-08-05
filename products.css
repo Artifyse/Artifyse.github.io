@@ -123,6 +123,14 @@
      z-index: 1001;
  }
 
+ @media (max-width: 768px) {
+     .navbar-brand {
+         font-size: 20px;
+         top: 10%;
+         right: 8%;
+     }
+ }
+
  .shopping-button {
      position: fixed;
      bottom: 100px;
@@ -286,8 +294,8 @@
 
  .device-pic img,
  .device-pic-fix img {
-    width: 100%;
-    height: auto;
+     width: 100%;
+     height: auto;
      object-fit: cover;
      object-position: right 5% top 20%;
      mix-blend-mode: multiply;
