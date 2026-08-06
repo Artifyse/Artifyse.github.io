@@ -1,3 +1,10 @@
+/* images never overflow their box */
+img { max-width: 100%;
+height: auto; }
+/* boxes in % rather than px */
+.column { width: 50%; }
+* { box-sizing: border-box; }
+
 .button {
                 display: inline-block;
                 padding: 0.85rem 2rem;
@@ -84,3 +91,11 @@
        body {
         font-family: Tahoma, Geneva, Verdana, sans-serif;
     }
+
+@media (max-width: 600px) {
+/* stack the menu vertically */
+nav a { display: block; }
+/* cards become full width */
+.card { width: 100%; }
+h1 { font-size: 18pt; }
+}
